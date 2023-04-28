@@ -27,11 +27,12 @@ var fet = fetch(restapi)
 function api({ name, flag, code, capital, region, population,latitude,longitude }) {
    
   document.body.innerHTML += 
-   ` <div class="cards">
+  ` <div class="container">
+    <div class="card">
     <h2 id="title" class="text-center">${name}</h2>
     <img src="${flag}" class="flag" alt="${name}'Flag image">
  
-  <div class="cards-body car" >
+  <div class="card-body car" >
   <p><span>Country Code :</span>${code}</p>
   <p><span>Population :</span>${population}</p>
   <p><span>Captial :</span> ${capital}</p>
@@ -44,12 +45,13 @@ function api({ name, flag, code, capital, region, population,latitude,longitude 
   
 </div>
 </div>
+</div>
 `
 }
 
 
 
-function wapi(lat,lng,name){
+function block(lat,lng,name){
 
   var apiweather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=06e423ec0af839c485470951f60c3f6b`
    
